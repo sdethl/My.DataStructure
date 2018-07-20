@@ -1,0 +1,16 @@
+﻿Time,Type,Code,Command,IP Addr,User
+6/26/18 13:41:22,Audit,AC,User logged out,192.168.3.79,UM
+6/27/18 13:41:10,Audit,AC,User logged out,192.168.3.80,TA
+6/28/18 13:41:09,Audit,AC,User logged in,192.168.3.81,UM
+6/29/18 13:41:06,Audit,AC,User logged out,192.168.3.82,UM
+6/30/18 13:41:10,Sec,AC,User logged out,192.168.3.80,TA
+7/1/18 13:41:23,Audit,BR,User logged in,192.168.3.84,UM
+7/2/18 13:41:45,Audit,AC,User logged out,192.168.3.85,UM
+7/3/18 13:41:12,Audit,BR,User logged out,192.168.3.80,TA
+7/4/18 13:41:07,Sec,AC,User logged out,192.168.3.87,UM
+7/5/18 13:41:23,Audit,BR,User logged in,192.168.3.80,TA
+7/6/18 13:41:15,Audit,AC,User logged out,192.168.3.89,UM
+7/7/18 13:41:21,Audit,BR,User logged out,192.168.3.91,TA
+7/8/18 13:41:19,Sec,AC,User logged out,192.168.3.91,UM
+7/9/18 13:41:22,Audit,AC,User logged out,192.168.3.91,UM
+7/10/18 13:41:03,Audit,AC,User logged out,192.168.3.93,UM
