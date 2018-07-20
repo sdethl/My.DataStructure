@@ -9,7 +9,7 @@ public class IntersectionOfArrays {
 
     /**
      *  #350. Intersection of Two Arrays II
-     *
+     * 交集
      *  Given two arrays, write a function to compute their intersection.
      Example:
      Given nums1 = [1, 2, 2, 1], nums2 = [2, 2], return [2, 2].
@@ -20,15 +20,17 @@ public class IntersectionOfArrays {
         List<Integer> list = new ArrayList<>();
         Map<Integer, Integer> map = new HashMap<>();
         for(int i : a){
-            map.put(i, 0);
+            if( map.containsKey(i))
+                map.put(i, map.get(i)+1);
+            else map.put(i, 1);
         }
+
         for(int i: b){
-            if(map.get(i) > 0)
-                map.put(i , map.get(i)+1);
-        }
-        for(Map.Entry<Integer, Integer> e : map.entrySet()){
-            if(e.getValue() > 0 )
-                list.add(e.getKey());
+            if( map.containsKey(i)  && map.get(i)>0 ){
+                list.add(i);
+                map.put(i , map.get(i)-1);
+            }
+
         }
         int length = list.size();
         int[] result = new int[length];
@@ -39,12 +41,12 @@ public class IntersectionOfArrays {
     }
 
     public static void main(String[] args) {
-        int[] a = {1, 2, 3, 3};
-        int[] b = {3, 3};
+        int[] a = {1, 2, 3, 3,1};
+        int[] b = {1,3};
 
         int[] result = (intersection(a, b));
         for(int i: result){
-            System.out.print(i);
+            System.out.print(i + ",");
         }
     }
 }
