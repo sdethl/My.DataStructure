@@ -1,7 +1,16 @@
 package datastructure;
 
+
 public class ListNode {
-    int val;
-    ListNode next;
-    ListNode(int x) {ListNode head;}
+
+    private int value;
+    public ListNode next;
+
+    public ListNode(int x) {
+        value = x;
+        next = null;
+    }
+    public int getValue(){
+        return value;
+    }
 }
