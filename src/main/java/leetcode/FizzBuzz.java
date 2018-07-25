@@ -33,15 +33,15 @@ public class FizzBuzz {
 //        List<String> result = new ArrayList<>();
 //        for(int i=1; i<=n; i++){
 //            if( i%3==0 && i%5==0 ){
-//                result.add("FizzBuzz");
+//                result.addFront("FizzBuzz");
 //            }
 //            if( i%3==0){
-//                result.add("Fizz");
+//                result.addFront("Fizz");
 //            }
 //            if( i%5==0){
-//                result.add("Buzz");
+//                result.addFront("Buzz");
 //            }
-//            else result.add(String.valueOf(i));
+//            else result.addFront(String.valueOf(i));
 //        }
 //        for(String str: result){
 //            System.out.print(str + ",");
