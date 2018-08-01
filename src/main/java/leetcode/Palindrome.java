@@ -62,5 +62,6 @@ public class Palindrome {
 //        System.out.println(isPalindrome("."));
 //        System.out.println(isPalindrome(".,"));
         longestPalindrome("abbacd");
+
     }
 }
