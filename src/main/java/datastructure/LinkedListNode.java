@@ -1,7 +1,9 @@
 package datastructure;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
+import java.util.ArrayDeque;
+import java.util.Deque;
+import java.util.PriorityQueue;
+import java.util.Queue;
 
 public class LinkedListNode {
 
@@ -18,10 +20,11 @@ public class LinkedListNode {
         }
     }
 
-    public void addFront(int value){
+    public Node addFront(int value){
         Node newNode = new Node(value);
         newNode.next = head;
         head = newNode;
+        return head;
     }
 
     /**
@@ -85,7 +88,19 @@ public class LinkedListNode {
 
     }
 
-
+    public boolean isEqual(Node a, Node b){
+        boolean same = true;
+        while( a!=null & b!=null){
+            if( a.value == b.value ){
+                a = a.next;
+                b = b.next;
+            }else{
+                same = false;
+                break;
+            }
+        }
+        return same;
+    }
 
     public void printList(){
         while( head != null){
@@ -100,5 +115,8 @@ public class LinkedListNode {
         list.addFront(5);
         list.deleteNode(1);
         list.printList();
+        Queue q = new PriorityQueue();
+        Deque dq = new ArrayDeque();
+
     }
 }
