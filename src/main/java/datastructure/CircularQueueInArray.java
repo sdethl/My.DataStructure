@@ -12,17 +12,17 @@ public class CircularQueueInArray implements Queue{
     int capacity;
     int[] queue;
 
-    //points that locate to the first space, last space and the last space that is not null
     int front;
     int rear;
-    int current;
+
+    int counter;
 
      public CircularQueueInArray(int capacity){
         this.capacity = capacity;
         queue = new int[capacity];
         rear = -1;
         front = 0;
-        current = 0;
+        counter = 0;
      }
 
      public boolean enQueue(int data){
@@ -31,7 +31,7 @@ public class CircularQueueInArray implements Queue{
         //for normal queue
         //rear = rear +1;
         queue[rear] = data;
-        current++;
+        counter++;
         return true;
      }
 
@@ -40,7 +40,7 @@ public class CircularQueueInArray implements Queue{
         front = ( front+1 )%capacity;
         //for normal queue
         //front = front +1;
-        current--;
+        counter--;
         return true;
      }
 
@@ -55,11 +55,11 @@ public class CircularQueueInArray implements Queue{
      }
 
      public boolean isFull(){
-        return current == capacity;
+        return counter == capacity;
      }
 
      public boolean isEmpty(){
-        return current == 0;
+        return counter == 0;
      }
 
      public void toPrint(){
