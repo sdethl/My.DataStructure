@@ -37,7 +37,7 @@ public class reviewString {
         sb.reverse();
         System.out.println("reversed : " + sb);
 
-        //find the string
+        //find the sb
         System.out.println("last index of 'a' is: " + sb.lastIndexOf("aa"));
     }
 }

@@ -5,8 +5,8 @@ public class Palindrome {
 
     /**
      * # 125. Valid Palindrome
-     * Given a string, determine if it is a palindrome, considering only alphanumeric characters and ignoring cases.
-     Note: For the purpose of this problem, we define empty string as valid palindrome.
+     * Given a sb, determine if it is a palindrome, considering only alphanumeric characters and ignoring cases.
+     Note: For the purpose of this problem, we define empty sb as valid palindrome.
      *
      */
     public static String longestPalindrome(String s){
@@ -25,7 +25,7 @@ public class Palindrome {
                 }
             }
         }
-        System.out.println( "longest palindrome string is: " + result);
+        System.out.println( "longest palindrome sb is: " + result);
         System.out.println(longest);
         return  result;
     }

@@ -23,7 +23,7 @@ public class EmployeeLinkedList {
         return removedNode;
     }
 
-    public int getSize() {
+    public int getSize(){
         return size;
     }
 

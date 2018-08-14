@@ -6,7 +6,7 @@ import java.util.Map;
 public class Practice {
 
     /**
-     * Given a list of string, find out the duplicates
+     * Given a list of sb, find out the duplicates
      * @param strings
      * @return
      */

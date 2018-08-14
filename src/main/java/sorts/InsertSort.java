@@ -17,9 +17,8 @@ public class InsertSort extends Sort {
             int i;
             //compare from right to left
             for( i=firstUnsortedIndex; i>0 && intArray[i-1] > newElement; i--){
-                    //shifting values
-                    intArray[i] = intArray[i-1];
-
+                //shifting values
+                intArray[i] = intArray[i-1];
             }
             //insert
             intArray[i] = newElement;
