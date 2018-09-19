@@ -56,8 +56,25 @@ public class Reverse {
         return rev;
     }
 
+    public static void reverseWords(String string){
+        String[] strs = string.trim().split(" ");
+        int i =0;
+        int j = strs.length -1;
+        String temp;
+        while( i <= j){
+            temp = strs[j];
+            strs[j] = strs[i];
+            strs[i] = temp;
+            i++;
+            j--;
+        }
+        for(String s : strs){
+            System.out.print(s);
+        }
+
+    }
 
     public static void main(String[] args){
-        System.out.println(reverseStringToList("good"));
+        reverseWords("the sky is blue");
     }
 }

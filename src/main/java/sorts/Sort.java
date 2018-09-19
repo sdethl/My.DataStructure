@@ -6,13 +6,14 @@ public abstract class Sort {
 
     Sort(int[] intArray){
         this.intArray = intArray;
-        printArray("original array");
-        System.out.println("");
+//        printArray("original array");
+//        System.out.println("");
     }
 
     int[] algorithm(){
         return intArray;
-    };
+    }
+    int[] algorithm(int[] intArray, int start, int end){ return  intArray;}
 
     void printArray(String arrayName){
         System.out.println(arrayName);
@@ -20,7 +21,7 @@ public abstract class Sort {
             System.out.print( number + ", ");
         }
         System.out.println("");
-    };
+    }
 
     public void swap(int[] array, int i, int j){
         if( i== j ){

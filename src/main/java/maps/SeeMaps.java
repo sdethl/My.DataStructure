@@ -25,8 +25,6 @@ public class SeeMaps {
         for(String str: hm.values()){
             System.out.println(str);
         }
-
         System.out.println("hashcode: " + hm.hashCode());
-
     }
 }

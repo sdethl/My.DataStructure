@@ -10,6 +10,7 @@ public class BubbleSort extends Sort {
      * Swap
      *
      * At the end of first loop, find the largest number
+     * At the end of second loop, find the second largest number
      *
      * https://en.wikipedia.org/wiki/Bubble_sort
      */
@@ -29,14 +30,4 @@ public class BubbleSort extends Sort {
         }
         return intArray;
     }
-
-
-//    private void swap(int[] array, int i, int j){
-//        if( i== j ){
-//            return;
-//        }
-//        int tmp = array[i];
-//        array[i] = array[j];
-//        array[j] = tmp;
-//    }
 }
