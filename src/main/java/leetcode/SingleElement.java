@@ -205,8 +205,48 @@ public class SingleElement {
         return result;
     }
 
+    /**
+     * Missing numbers from 2 arrays
+     *  a1[n]:
+     *  a2[n]: shuffle a1, and delete elements randomly
+     *  find the missing number
+     *
+     *  algorithm:
+     *  1. take care of the edge cases
+     *  2. sort the arrays
+     *  3. Loop each element for a1[] and a2[]
+     *      a. compare a1[n] and a2[m]
+     *      b. if the last element got deleted (a1.size > a2.size)
+     *          return a[n]
+     *      c. if (a[n] != a[m])
+     *          return a[n]
+     */
+    public static int findMissingNumFrom2Arrays(int[] nums, int[] nums2){
+
+        int size1 = nums.length;
+        int size2 = nums2.length;
+        if( size1 <= size2){
+            return 0;
+        }
+
+        int result = 0;
+        Arrays.sort(nums);
+        Arrays.sort(nums2);
+//        for(int i=0; i< size1 ; i++){
+//            for(int j=0; j < size2; j++){
+//                if ( nums[i] != nums2[j] || i>j){
+//                   result = nums[i];
+//                }
+//            }
+//        }
+
+        return result;
+    }
+
     public static void main(String[] args){
-        int[] nums = {2,5,4,1,0};
-        System.out.println(findMissingNum(nums));
+        int[] nums = {1,2,3,4,5};
+        int[] nums2 = {1,4,5,2};
+        //System.out.println(findMissingNum(nums));
+        System.out.println(findMissingNumFrom2Arrays(nums, nums2));
     }
 }

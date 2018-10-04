@@ -14,28 +14,24 @@ public class Anagram {
      Input: s = "anagram", t = "nagaram"
      Output: true
      */
-    public static boolean isAnagram(String s, String t){
+    public boolean isAnagram(String s, String t){
         if (s.length() != t.length()) {
             return false;
         }
         char[] str1 = s.toCharArray();
         char[] str2 = t.toCharArray();
+
+        //quick sort, time complexity O(NlogN)
         Arrays.sort(str1);
         Arrays.sort(str2);
+        /**
+         * Arrays.equals does the following.
+         * time complexity is O(N), linear search
+         *
+         * for (int i=0; i<length; i++)
+         *  if (a[i] != a2[i])
+         *  return false;
+         */
         return Arrays.equals(str1, str2);
         }
-
-    private static Map<Character, Integer> stringToMap(String string){
-        Map<Character, Integer> map = new HashMap();
-        for(char c : string.toCharArray()){
-            if( !map.containsKey(c) )
-                map.put(c, 1);
-            else map.put(c, map.get(c)+1);
-        }
-        return map;
-    }
-
-    public static void main(String[] args){
-        System.out.println(isAnagram("aaaa", "aa"));
-    }
 }

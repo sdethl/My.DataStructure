@@ -1,7 +1,6 @@
 package leetcode;
-
-
-public class Reverse {
+import common.Util;
+public class Reverse{
     /**
      * Leet code : #344. Reverse String
      * Write a function that takes a sb as input and returns the sb reversed.
@@ -54,6 +53,19 @@ public class Reverse {
             rev = rev * 10 + pop;
         }
         return rev;
+    }
+
+    //in-place solution O(N), no extra memory
+    public static int[] reverseArrays(int[] nums){
+        int start =0;
+        int end = nums.length-1;
+        if( end == 0 ){
+            return nums;
+        }
+        while( start<end ){
+            Util.swap(nums, start, end);
+        }
+        return nums;
     }
 
     public static void reverseWords(String string){

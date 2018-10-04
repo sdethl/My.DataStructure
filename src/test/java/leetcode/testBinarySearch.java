@@ -1,7 +1,7 @@
 package leetcode;
 
 import org.testng.annotations.Test;
-import sorts.BinarySearch;
+import search.BinarySearch;
 
 import static org.testng.AssertJUnit.assertEquals;
 

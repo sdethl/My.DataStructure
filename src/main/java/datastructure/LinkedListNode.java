@@ -12,7 +12,9 @@ public class LinkedListNode {
      */
     static Node head;
     private static class Node{
+        //data
         int value;
+        //reference of next node
         Node next;
         Node(int x){
             value = x;

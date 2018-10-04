@@ -82,7 +82,7 @@ public class testTwoSum {
 
     @Test
     public void testTwoSum(){
-        TwoSum ts = new TwoSum();
+        Sums ts = new Sums();
         ts.add(3);
         ts.add(99);
         ts.add(8);
@@ -91,5 +91,13 @@ public class testTwoSum {
         System.out.println(ts.find(7));
         System.out.println(ts.find(10));
     }
+
+    @Test
+    public void testLargestSum(){
+        int[] nums = {100,-10,20,-10,3};
+        Sums s = new Sums();
+        System.out.println(s.largestSum(nums));
+    }
+
 
 }

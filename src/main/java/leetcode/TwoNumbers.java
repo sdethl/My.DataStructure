@@ -1,6 +1,6 @@
 package leetcode;
 
-import sorts.BinarySearch;
+import search.BinarySearch;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -78,7 +78,7 @@ public class TwoNumbers {
     }
 
     /**
-     * Design and implement a TwoSum class. It should support the following operations: add and find
+     * Design and implement a Sums class. It should support the following operations: add and find
      * add(input) Add the number input to an internal data structure
      * find(value) Find if there exists any pair of numbers which sum is equal to the value
      */
