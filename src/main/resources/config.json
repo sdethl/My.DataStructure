@@ -1,0 +1,23 @@
+{
+  "selenium" : {
+    "browserName": "chrome",
+    "browserDriver": "webdriver.chrome.driver",
+    "driverPath": "C:\\S3\\resources\\chromedriver.exe"
+  },
+  "baseUrl": {
+    "http": "https://",
+    "server" : "tmp.",
+    "site" : "s3betaplatform.com",
+    "port" : "/"
+  },
+  "drivers": {
+    "chrome": {
+      "browserDriver": "webdriver.chrome.driver",
+      "driverPath": "C:\\S3\\resources\\chromedriver.exe"
+    },
+    "firefox": {
+      "browserDriver": "webdriver.firefox.driver",
+      "driverPath": "C:\\S3\\resources\\firefoxdriver.exe"
+    }
+  }
+}
