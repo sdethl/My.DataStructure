@@ -1,6 +1,6 @@
 package common;
 
-import login.LoginPageObj;
+import Selenium.login.LoginPageObj;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
@@ -40,7 +40,7 @@ public abstract class BaseAbstractTest extends SystemConfiguration{
     }
 
     public void signIn(WebDriver myDriver, String url, String username, String password){
-        logger.info("signIn: login to the site.");
+        logger.info("signIn: Selenium.login to the site.");
         if( myDriver == null ){
             logger.error("Error - myDriver is empty!");
         }else if(url == null || username == null || password == null){

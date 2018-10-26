@@ -16,7 +16,7 @@ public class QuickSort extends Sort {
      **/
 
     int[] algorithm(int[] a, int start, int end) {
-        if( end - start < 2 ){
+        if( start <= end){
             return a;
         }
         int pivotIndex = partition(a, start, end);
@@ -53,6 +53,29 @@ public class QuickSort extends Sort {
         //put the pivot to correct position
         input[j] = pivot;
         return j;
+    }
+
+    int partition2(int[] input, int start, int end){
+
+        int pivot = input[end];
+        int i = start - 1;
+        for( int j=start; j<(end-1); j ++){
+            if(input[j] <= pivot){
+                i++;
+                swap(input[i] , input[j]);
+            }else {
+                j++;
+            }
+        }
+        input[i+1] = pivot;
+        return i+1;
+    }
+
+    private void swap(int i, int j){
+        int temp;
+        temp = i;
+        i = j;
+        j = temp;
     }
 
 }

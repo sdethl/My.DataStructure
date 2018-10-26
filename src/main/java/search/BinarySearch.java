@@ -21,12 +21,10 @@ public class BinarySearch {
         if(nums[mid] == value)
             return mid;
         else if( value < nums[mid]){
-            end = mid;
-            return recursiveBinarySearch(nums, start, end, value);
+            return recursiveBinarySearch(nums, start, mid, value);//left
         }
         else
-            start = mid + 1;
-            return recursiveBinarySearch(nums, start, end, value);
+            return recursiveBinarySearch(nums, mid+1, end, value); //right
     }
 
     public int iterativeBinarySearch(int[] nums, int start, int end, int value){
@@ -36,10 +34,10 @@ public class BinarySearch {
             int mid = (start + end)/2;
             if( nums[mid] == value)
                 return  mid;
-            else if( value < nums[mid]){
+            else if( value < nums[mid]){ //left
                 end = mid;
             }else
-                start = mid + 1;
+                start = mid + 1; //right
         }
         return -1;
     }

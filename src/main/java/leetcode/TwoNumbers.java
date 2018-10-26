@@ -12,7 +12,7 @@ public class TwoNumbers {
      * Given an array of integers, return indices of the two numbers such that they add up to a specific target.
      You may assume that each input would have exactly one solution, and you may not use the same element twice.
      */
-    // brute force: O(N2) time, O(1) space
+    // brute force: O(N^2) time, O(1) space
     public int[] twoSum(int[] nums, int target) {
         if( nums.length == 1 && nums[0] == target){
             return new int[]{0};

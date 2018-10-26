@@ -108,7 +108,7 @@ public class Recursion {
     }
 
     private String helper2(int num) {
-        String result = new String();
+        String result;
         if (num < 10) result = belowTen[num];
         else if (num < 20) result = belowTwenty[num -10];
         else if (num < 100) result = belowHundred[num/10] + " " + helper2(num % 10);

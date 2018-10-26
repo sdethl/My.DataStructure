@@ -1,9 +1,6 @@
 package leetcode;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class IntersectionOfArrays {
 
@@ -17,6 +14,10 @@ public class IntersectionOfArrays {
      The result can be in any order.
      */
 //    public int[] intersection2(int[] a, int[] b){
+//        Set<Integer> s = new HashSet<>();
+//        int[] longArray = a.length > b.length ? a : b;
+//        Map<Integer, Integer> countingMap = new HashMap<>();
+//        //return result;
 //
 //    }
 

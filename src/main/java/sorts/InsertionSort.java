@@ -17,16 +17,14 @@ public class InsertionSort extends Sort {
     int[] algorithm(){
 
         int len = intArray.length;
-        for(int firstUnsortedIndex = 1; firstUnsortedIndex < len; firstUnsortedIndex++){
-            int toBeInsertedElement = intArray[firstUnsortedIndex];
-            int i;
-            //shifting: compare from right to left
-            for( i=firstUnsortedIndex; i>0 && intArray[i-1] > toBeInsertedElement; i--){
-                //shifting values, move [i-1] to [i]
-                intArray[i] = intArray[i-1];
+        for(int i = 1; i < len; i++){
+            int toBeInsertedElement = intArray[i];
+            int j = i-1;
+            while( j>=0 && intArray[j] > toBeInsertedElement){
+                intArray[j+1] = intArray[j];
+                j--;
             }
-            //insert
-            intArray[i] = toBeInsertedElement;
+            intArray[j+1] = toBeInsertedElement;
         }
         return intArray;
     }

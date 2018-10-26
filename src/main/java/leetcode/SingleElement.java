@@ -108,7 +108,7 @@ public class SingleElement {
      */
      public static int theFirstUniqElement(String s){
          Map<Character, Integer> map = new LinkedHashMap<>();
-         Set<Character> set = new HashSet<>();
+         Set<Character> set = new HashSet<>(); //
          for (int i = 0; i < s.length(); i++) {
              if (set.contains(s.charAt(i))) {
                  if (map.get(s.charAt(i)) != null) {
@@ -126,6 +126,19 @@ public class SingleElement {
          return map.size() == 0 ? -1 : map.entrySet().iterator().next().getValue();
      }
 
+     public int theDuplicateElement(String str){
+         Map<Character, Integer> map = new HashMap<>();
+         for( int i=0; i<str.length(); i++ ){
+             char temp = str.charAt(i);
+             if( map.containsKey(temp)){
+                 return map.get(temp);
+             }else{
+                 map.put(temp, i);
+             }
+         }
+         return -1;
+     }
+
     /**
      * 287. Find the Duplicate Number
      *
@@ -139,7 +152,7 @@ public class SingleElement {
      * Note:
      You must not modify the array (assume the array is read only).
      You must use only constant, O(1) extra space.
-     Your runtime complexity should be less than O(n2).
+     Your runtime complexity should be less than O(N).
      There is only one duplicate number in the array, but it could be repeated more than once.
      */
     public static int findTheDup(int[] nums){
@@ -175,6 +188,7 @@ public class SingleElement {
      Input: [3,2,1,5,6,4] and k = 2
      Output: 5
      */
+    //O(nlogn)
     public static int findKthLargest(int[] nums, int k){
         int l = nums.length;
         if( k > l|| k ==0 ){
@@ -241,6 +255,41 @@ public class SingleElement {
 //        }
 
         return result;
+    }
+
+    //O(n)
+    //if sort(), O(nlogn)
+    public int the3LargestNumber(int[] nums){
+        if (nums.length == 0) {
+            return 0;
+        }
+        int firstMax = Integer.MIN_VALUE;
+        int secondMax = Integer.MIN_VALUE;
+        int thirdMax = Integer.MIN_VALUE;
+        for (int num : nums) {
+            if (num > firstMax) {
+                thirdMax = secondMax;
+                secondMax = firstMax;
+                firstMax = num;
+            } else if (num > secondMax && num < firstMax) {
+                thirdMax = secondMax;
+                secondMax = num;
+            } else if (num > thirdMax && num < firstMax && num < secondMax) {
+                thirdMax = num;
+            }
+        }
+        return thirdMax == Long.MIN_VALUE ? firstMax : thirdMax;
+    }
+
+    public int findThe2LargestNumber(int[] nums){
+
+        return 0;
+    }
+
+    // leetcode #202
+    public boolean isHappyNumber(int x){
+
+        return false;
     }
 
     public static void main(String[] args){

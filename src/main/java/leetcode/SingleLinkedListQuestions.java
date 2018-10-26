@@ -43,7 +43,8 @@ public class SingleLinkedListQuestions {
 
     public static void printList(ListNode node){
         while( node != null){
-            System.out.print(node.getValue() + " ");
+            //todo: fix getValue
+            //System.out.print(node.getValue() + " ");
             node = node.next;
         }
     }

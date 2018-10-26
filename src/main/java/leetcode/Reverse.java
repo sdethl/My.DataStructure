@@ -1,5 +1,9 @@
 package leetcode;
 import common.Util;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class Reverse{
     /**
      * Leet code : #344. Reverse String
@@ -68,6 +72,7 @@ public class Reverse{
         return nums;
     }
 
+    //in-place, O(n/2)
     public static void reverseWords(String string){
         String[] strs = string.trim().split(" ");
         int i =0;
@@ -81,12 +86,12 @@ public class Reverse{
             j--;
         }
         for(String s : strs){
-            System.out.print(s);
+            System.out.print(s + " ");
         }
 
     }
 
     public static void main(String[] args){
-        reverseWords("the sky is blue");
+        reverseWords("tall is Gavin");
     }
 }

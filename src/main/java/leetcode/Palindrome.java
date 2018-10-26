@@ -9,6 +9,29 @@ public class Palindrome {
      Note: For the purpose of this problem, we define empty sb as valid palindrome.
      *
      */
+    public boolean isPalindrome2(String s){
+
+        //in-place algorithm similar to reverse, O(N/2)
+
+        int start =0;
+        int end = s.length()-1;
+        while( start < end ){
+            while ( start<end && !Character.isLetterOrDigit(s.charAt(start))){
+                start++;
+            }
+            while( start<end && !Character.isLetterOrDigit(s.charAt(end))){
+                end--;
+            }
+            if( s.charAt(start) != s.charAt(end)){
+                return false;
+            }
+            start++;
+            end--;
+        }
+        return true;
+    }
+
+
     public static String longestPalindrome(String s){
         int length = s.length();
         int longest = 0;
@@ -81,11 +104,14 @@ public class Palindrome {
     }
 
     public static ListNode reverse(ListNode head){
+
         ListNode original = head;
         ListNode reversed = null;
+
         ListNode prev = null;
         ListNode current = head;
         ListNode next = null;
+
         while (current != null) {
             next = current.next;
             current.next = prev;
@@ -117,5 +143,22 @@ public class Palindrome {
             head = head.next;
         }
         System.out.println(" ");
+    }
+
+    public boolean isPalindrome(int x){
+        if( x == reverseNumber(x)){
+            return true;
+        }
+        return false;
+    }
+
+    // drawback: the rev can be overflowed
+    private int reverseNumber(int num){
+        int rev = 0;
+        while( num != 0){
+            rev = rev * 10 + num % 10;
+            num /= 10;
+        }
+        return rev;
     }
 }

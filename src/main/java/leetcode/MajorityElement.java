@@ -1,5 +1,6 @@
 package leetcode;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -11,6 +12,18 @@ public class MajorityElement {
      * The majority element is the element that appears more than ⌊ n/2 ⌋ times.
        You may assume that the array is non-empty and the majority element always exist in the array.
      */
+
+    // quick sort O(nlogn)
+    public int theMajority(int[] nums){
+        if(nums.length == 1){
+            return nums[0];
+        }
+        Arrays.sort(nums);
+        return nums[nums.length/2];
+    }
+
+
+    // O(n)
     public static int theElement(int[] nums){
         int count =0;
         Map<Integer, Integer> map = new HashMap<>();

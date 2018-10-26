@@ -3,6 +3,7 @@ package leetcode;
 import com.sun.deploy.util.ArrayUtil;
 import com.sun.deploy.util.StringUtils;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -27,6 +28,20 @@ public class MoveZeros {
                 list.add(i);
         }
         return list.stream().mapToInt(i->i).toArray();
+    }
+
+    public int[] moveElements2(int[] nums){
+        List<Integer> result = new ArrayList<Integer>();
+        for(int i : nums){
+            if ( i != 0 ){
+                result.add(i);
+            }
+        }
+        int temp = nums.length - result.size();
+        for(int i=0; i< temp; i++){
+            result.add(0);
+        }
+        return result.stream().mapToInt(i->i).toArray();
     }
 
     public static void main(String[] args){
