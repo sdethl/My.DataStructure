@@ -27,7 +27,7 @@ public class BestTimeToBuyAndSell {
      *  4. return the max profit
      */
 
-    //brute force
+    //brute force O(n^2)
     public static int returnProfit(int[] nums){
         int profit =0;
         int length = nums.length;
@@ -41,6 +41,7 @@ public class BestTimeToBuyAndSell {
         return profit;
     }
 
+    //O(n)
     public static int greedyFindProfit(int[] nums){
         int maxProfit = 0;
         int minStockPrice = nums[0];

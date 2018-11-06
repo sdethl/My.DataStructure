@@ -23,7 +23,6 @@ public class LinkedList<T extends Comparable<T>> implements List<T> {
         this.head = newNode;
         sizeOfList++;
     }
-
     //O(N)
     private void insertDataAtEnd(T data, Node<T> node){
         if( node.getNextNode() != null){
@@ -33,8 +32,6 @@ public class LinkedList<T extends Comparable<T>> implements List<T> {
             node.setNextNode(newNode);
         }
     }
-
-
     /**
      * @param data: the element to be deleted
      *

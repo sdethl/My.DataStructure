@@ -9,7 +9,7 @@ public class TwoSum {
     // Time: O(N), Space O(N)
 
     public int[] twoSum1(int[] nums, int target){
-        //key: value => value: index
+        //value: value => value: index
         Map<Integer, Integer> m = new HashMap();
 
         for(int i =0; i<nums.length; i++){
@@ -36,7 +36,6 @@ public class TwoSum {
         throw  new IllegalArgumentException("cant find!");
     }
 
-
     private int binarySearch(int[] nums, int key, int start, int end){
         int mid = ( start + end )/2;
         if( key == mid) return mid;
@@ -60,9 +59,13 @@ public class TwoSum {
             if( sum < target){
                 i++;
             }else{
-                j++;
+                j--;
             }
         }
         throw new IllegalArgumentException("cant find!");
+    }
+
+    public int[] threeSum(int[] nums, int target){
+        return new int[] {0,1};
     }
 }

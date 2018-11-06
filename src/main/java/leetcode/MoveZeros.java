@@ -1,8 +1,5 @@
 package leetcode;
 
-import com.sun.deploy.util.ArrayUtil;
-import com.sun.deploy.util.StringUtils;
-
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -17,7 +14,7 @@ public class MoveZeros {
      Input: [0,1,0,3,12]
      Output: [1,3,12,0,0]
      */
-    public static int[] moveElements(int[] nums){
+    public static int[] moveZeros(int[] nums){
         LinkedList<Integer> list = new LinkedList<>();
         for(int i : nums){
             if( i != 0 )
@@ -46,7 +43,7 @@ public class MoveZeros {
 
     public static void main(String[] args){
         int[] nums = {1,0,3,0,5};
-        int[] resolved = moveElements(nums);
+        int[] resolved = moveZeros(nums);
         for(int i:resolved){
             System.out.print(i + ",");
         }

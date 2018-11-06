@@ -4,10 +4,8 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
 import java.io.File;
 import java.io.IOException;
-import java.util.Map;
 
 public class ReadConfig implements Configurable{
 
@@ -21,7 +19,6 @@ public class ReadConfig implements Configurable{
     private String server = null;
     private String site = null;
     private String port = null;
-
 
     public ReadConfig(){
         logger.info("Constructor: Loading config.json into the system.");
@@ -58,27 +55,21 @@ public class ReadConfig implements Configurable{
     public String getBrowserName() {
         return browserName;
     }
-
     public String getBrowserDriver() {
         return browserDriver;
     }
-
     public String getDriverPath() {
         return driverPath;
     }
-
     public String getHttp() {
         return http;
     }
-
     public String getServer() {
         return server;
     }
-
     public String getSite() {
         return site;
     }
-
     public String getPort() {
         return port;
     }

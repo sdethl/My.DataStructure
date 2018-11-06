@@ -31,6 +31,14 @@ public class MyStack {
         }
     }
 
+    /**
+     * #155. Find the minimum number
+     * Design a stack that supports push, pop, top, and retrieving the minimum element in constant time.
+     */
+    public int getMin(){
+        return 0;
+    }
+
     public int peek(){
         return stackArray[top];
     }

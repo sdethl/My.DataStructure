@@ -1,12 +1,12 @@
 package maps;
 
-import java.util.Map;
-import java.util.TreeMap;
+        import java.util.Map;
+        import java.util.TreeMap;
 
 public class SeeMaps {
 
     /**
-     * Map has unique key, but not unique value
+     * Map has unique value, but not unique value
      */
 
     public void method1(){
@@ -18,7 +18,7 @@ public class SeeMaps {
 
         //iterate entry sets
         for(Map.Entry<String, String> entry : hm.entrySet()){
-            System.out.println("key=" + entry.getKey() + ", value=" + entry.getValue());
+            System.out.println("value=" + entry.getKey() + ", value=" + entry.getValue());
         }
 
         //iterate values

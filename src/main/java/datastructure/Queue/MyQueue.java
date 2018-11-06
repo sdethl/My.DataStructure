@@ -43,7 +43,6 @@ public class MyQueue {
     public void view(){
 
     }
-
     public boolean isEmpty(){
         return (nItems == 0);
     }

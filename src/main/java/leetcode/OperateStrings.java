@@ -16,8 +16,8 @@ public class OperateStrings {
      *      HashMap
      * 3. Loop for each member:
      *      a. push a[i] into map
-     *      b. if a[i] is new to the map, add to key, value =1
-     *      c if a[i] exists, add to key, value+1
+     *      b. if a[i] is new to the map, add to value, value =1
+     *      c if a[i] exists, add to value, value+1
      * 4. output the elements to a string
      */
     public String compressString(String s){
